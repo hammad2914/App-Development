@@ -26,7 +26,7 @@ html::-webkit-scrollbar-track {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1700px;
 
 }
 
@@ -303,15 +303,41 @@ b {
     padding: 20px;
     height: 100%;
     text-align: left;
+    position: relative;
+    transition: all 0.5s;
 }
-
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(29, 37, 110,0.7);
+}
+.service-box:hover{
+    background-image: url('../images/phone-mobile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service-box:hover::before{
+    width: 100%;
+}
+.service-box:hover .icon svg{
+    fill: #fff !important;
+}
+.service-box:hover h3, .service-box:hover p{
+    color: #fff;
+}
 .icon {
     text-align: left;
+    z-index: 1;
+    position: relative;
 }
 
-.icon img {
+.icon svg {
     width: 60px;
-    height: 80px;
+    height: 60px;
 }
 
 .service-box h3 {
@@ -319,17 +345,22 @@ b {
     font-weight: 700;
     color: #1D256E;
     margin-top: 25px;
+    z-index: 1;
+    position: relative;
 }
 
 .service-box p {
     width: 100%;
     font-size: 1.6rem;
+    z-index: 1;
+    position: relative;
 }
 
 .portfolio-wrap {
     margin-top: 20px;
-    padding: 40px 20px;
+    padding: 40px 0px;
     text-align: center;
+    max-width: 1700px;
 }
 
 .our-product {
@@ -337,12 +368,11 @@ b {
     align-items: center;
     max-width: 1250px;
     margin: 0px auto;
-    padding: 30px 0px;
+    padding: 30px 20px;
 }
 
 .our-product-color {
     background-color: #eef0fb;
-    border-radius: 10px;
     margin: 20px 0px;
 }
 
