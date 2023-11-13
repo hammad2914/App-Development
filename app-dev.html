@@ -20,7 +20,7 @@
                 <p>Partner with us to turn your vision into reality. Our mobile application development expertise
                     ensures your ideas are not just realized but crafted into remarkable, user-friendly experiences that
                     stand out in the digital landscape.</p>
-                <button class="quote-btn"><span>Get a Quote</span></button>
+                <button class="quote-btn" onclick="openForm()"><span>Get a Quote</span></button>
             </div>
             <div class="headline-image col-md-5">
                 <img src="./assets/images/app-headline.jpg" alt="app-development-headline-image">
@@ -296,7 +296,7 @@
                             an incredibly varied creator community. Since its launch, the platform has become renowned
                             for its unique content and features, including connecting with artists immediately and
                             unearthing unheard-of tracks, podcasts, and more, all in one spot!</p>
-                        <button class="quote-btn"><span>Get a Quote</span></button>
+                        <button class="quote-btn" onclick="openForm()"><span>Get a Quote</span></button>
                     </div>
                 </div>
                 <div class="col-md-1"></div>
@@ -325,7 +325,7 @@
                                 from two-sided network effects. As more drivers join the platform, it becomes (to a
                                 certain
                                 extent) more.</p>
-                            <button class="quote-btn"><span>Get a Quote</span></button>
+                            <button class="quote-btn" onclick="openForm()"><span>Get a Quote</span></button>
                         </div>
                     </div>
                 </div>
@@ -339,7 +339,7 @@
                             be delivered right to their doorstep. Food delivery options have emerged as popular options
                             to order food from favorite restaurants without leaving their homes. And this, in turn, has
                             caused a substantial change in consumer preferences.</p>
-                        <button class="quote-btn"><span>Get a Quote</span></button>
+                        <button class="quote-btn" onclick="openForm()"><span>Get a Quote</span></button>
                     </div>
                 </div>
                 <div class="col-md-1"></div>
@@ -363,7 +363,7 @@
                             seasoned team of designers and developers meticulously codes, tests, and refines, ensuring a
                             seamless integration of core features. The result is a cutting-edge mobile app that exceeds
                             expectations, a testament to our commitment to excellence in every stage of development.</p>
-                        <button class="quote-btn"><span>Get a Quote</span></button>
+                        <button class="quote-btn" onclick="openForm()"><span>Get a Quote</span></button>
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -397,12 +397,13 @@
                             adept mobile app consultants.</p>
                         <p>Engage in a conversation about your vision, and together, let's transform your ideas into
                             tangible success!</p>
-                        <button class="quote-btn"><span>Get a Quote</span></button>
+                        <button class="quote-btn" onclick="openForm()"><span>Get a Quote</span></button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- why itg end -->
+        <!-- Contact Form start -->
         <div class="quote-form-wrap row">
             <div class="quote-form">
                 <div class="col-md-6">
@@ -452,6 +453,23 @@
                 </div>
             </div>
         </div>
+        <!-- Contact form end -->
+        <!-- fixed form start -->
+        <div class="quote-container">
+            <button class="form-open-button" onclick="openForm()">Get in Touch</button>
+            <div class="quote-fix-form" id="quoteForm">
+              <button class="close-button" onclick="closeForm()">x</button>
+              <h2>Get a Quote Now</h2>
+              <form>
+                <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+                <input type="email" id="email" name="email" placeholder="Email Address" required><br>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required><br>
+                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        <!-- fixed form end -->
     </div>
 
     <!-- js -->
